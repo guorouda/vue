@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Ant Design Vue按钮例子</title>
+    <script src="http://www.itxst.com/package/vue/vue.min.js"></script>
+    <script src="http://www.itxst.com/package/ant-design-vue/antd.min.js"></script>
+    <link href="http://www.itxst.com/package/ant-design-vue/antd.min.css" rel="stylesheet" />
+   <style>
+        body{
+            padding-top:10px
+        }
+    </style>
+</head>
+<body>
+      <div  id="app">
+        <a-button type="primary">Primary</a-button>
+        <a-button>Default</a-button>
+        <a-button type="dashed">Dashed</a-button>
+        <a-button type="danger">Danger</a-button>
+        <a-config-provider :autoInsertSpaceInButton="false">
+            <a-button type="primary">按钮</a-button>
+        </a-config-provider>
+        <a-button type="primary">按钮</a-button>
+        <a-button type="link">Link</a-button>
+    </div>
+	<br>
+	<div   class="search_row">
+      <div class="form-group" style="float:left" >      
+          <div class="search_label" >图书名称:</div>    <input type="text" class="editText" name="bookName" />
+       </div>
+       <div class="form-group" style="float:left"  >
+           <div class="search_label" >出版社:</div>    <input type="text" class="editText" name="publisher"  />
+       </div>
+       <div style="clear:both">dd </div>                 
+  </div>
+    <script>
+            var app = new Vue({
+            el: '#app',
+            data: { 
+            }
+        });
+    </script>
+</body>
+</html>

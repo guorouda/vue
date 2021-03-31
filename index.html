@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+  <style>
+    div {
+      padding: 10px;    
+    }
+  </style>
+</head>
+<body>
+  <div id="app" @click="log(1)" @click.capture="log(10)" style="background-color: #00f;">
+    <div @click="log(2)" @click.capture="log(20)" style="background-color: #66f;">
+      <div @click="log(3)" @click.capture="log(30)" style="background-color: #ccf;">
+        <div @click="log(4)" @click.capture="log(40)" style="background-color: #fff;">
+          click here! {{ count}}
+          <input type="button" value="ok" style="width: 50px;" v-on:click.stop="count += 1">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var app = new Vue({
+      el: "#app",
+      data(){
+        return {
+          count: 0
+        };
+      },
+      methods: {
+        log: function(num){
+          console.log(num);
+        }
+      }
+    })
+  </script>
+</body>
+</html>
